@@ -1,0 +1,132 @@
+.material-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fc;
+}
+
+.page-title {
+  text-align: center;
+  color: #1f4fd8;
+  margin-bottom: 20px;
+}
+
+/* Section Cards */
+.section-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.section-card {
+  background-color: #1f4fd8;
+  color: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.section-card.active,
+.section-card:hover {
+  background-color: #163fb3;
+}
+
+/* Form */
+.material-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.material-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.material-form input,
+.material-form select,
+.material-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.material-form textarea {
+  grid-column: span 3;
+  resize: none;
+}
+
+.material-form button {
+  grid-column: span 3;
+  padding: 12px;
+  background-color: #1f4fd8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.material-form button:hover {
+  background-color: #163fb3;
+}
+
+/* Table */
+.material-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.material-table th,
+.material-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.material-table th {
+  background-color: #1f4fd8;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Summary */
+.summary-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.summary-card {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  width: 220px;
+  border-radius: 20px;
+  border: 2px solid grey;
+  text-align: center;
+}

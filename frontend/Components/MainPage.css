@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #f4f8ff, #eef2f9);
+  overflow: hidden; /* No scroll */
+}
+
+/* ===== Layout ===== */
+.dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* ===== Premium Navbar ===== */
+.navbar {
+  height: 110px;
+  padding: 0 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Attractive Gradient */
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Left Branding */
+.nav-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 38px;
+  font-weight: 700;
+  color: white;
+}
+
+.tagline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+}
+
+/* Right Buttons */
+.nav-right {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-btn {
+  padding: 11px 22px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+/* Profile Button (Glass Effect) */
+.nav-btn.profile {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.nav-btn.profile:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Logout Button */
+.nav-btn.logout {
+  background: linear-gradient(135deg, #ff4d4d, #d90000);
+  color: white;
+}
+
+.nav-btn.logout:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* ===== Main Content ===== */
+.content {
+  flex: 1;
+  max-width: 1150px;
+  margin: auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* ===== Welcome Section ===== */
+.welcome {
+  text-align: center;
+}
+
+.welcome h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1e3c72;
+}
+
+.welcome span {
+  color: #2a5298;
+}
+
+/* Better Welcome Description */
+.welcome p {
+  margin-top: 12px;
+  font-size: 17px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #4f5d75;
+  line-height: 1.6;
+}
+
+/* ===== Modules Grid ===== */
+.modules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  padding: 0 40px;
+}
+
+/* ===== Module Card Styling ===== */
+.module-card {
+  padding: 42px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(220, 230, 245, 0.9);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  transition: 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Soft Glow Bubble */
+.module-card::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 180px;
+  height: 180px;
+  background: rgba(42, 82, 152, 0.12);
+  border-radius: 50%;
+}
+
+/* Hover Lift Effect */
+.module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Text */
+.module-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #1e3c72;
+}
+
+.module-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
