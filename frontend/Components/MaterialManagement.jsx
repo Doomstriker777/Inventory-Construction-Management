@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./MaterialManagement.css";
 
 function MaterialManagement() {
+  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("manage");
   const [materials, setMaterials] = useState([]);
   const [editIndex, setEditIndex] = useState(-1);
@@ -64,6 +66,11 @@ function MaterialManagement() {
 
   return (
     <div className="material-page">
+
+      <button className="back-btn" onClick={() => navigate("/")}>
+        ← Back 
+      </button>
+
       <h2 className="page-title">Material Management Module</h2>
 
       {/* Section Cards */}
