@@ -1,0 +1,194 @@
+/* GLOBAL FIX */
+html, body {
+  height: auto;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Layout */
+.request-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fbff);
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  max-width: 950px;
+  margin: auto;
+}
+
+/* Header */
+.request-header {
+  margin-bottom: 35px;
+}
+
+.page-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #1e293b, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Form Section */
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.request-form-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.request-form-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #334155;
+}
+
+/* Inputs */
+.request-form-card input,
+.request-form-card select {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  font-size: 14px;
+  transition: 0.25s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.request-form-card input:focus,
+.request-form-card select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Add */
+.add {
+  background: #2563eb;
+  color: white;
+}
+
+.add:hover {
+  opacity: 0.9;
+}
+
+/* Update */
+.update {
+  background: #059669;
+  color: white;
+}
+
+.update:hover {
+  opacity: 0.9;
+}
+
+/* Edit */
+.edit {
+  background: #e0ecff;
+  color: #1d4ed8;
+}
+
+.edit:hover {
+  background: #c7dbff;
+}
+
+/* Delete */
+.delete {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete:hover {
+  background: #fecaca;
+}
+
+/* Request List — FORCED SCROLL */
+.request-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  height: 400px;      /* Fixed height */
+  overflow-y: scroll; /* Force vertical scroll */
+}
+
+/* Card */
+.request-card {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  transition: 0.25s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.request-card h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.request-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Status Badge */
+.status {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status.approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}

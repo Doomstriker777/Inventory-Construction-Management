@@ -1,0 +1,31 @@
+import React,{useState,useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
+
+const MainPage = () => {
+  const navigate = useNavigate()
+  const [loggedInUser,setLoggedInUser] = useState('')
+
+  useEffect(()=>{
+    setLoggedInUser(localStorage.getItem('name'))
+
+  },[])
+
+  const handleLogOut = (e)=>{
+    localStorage.removeItem('token')//we are remove the token and the name from the local storage 
+    localStorage.removeItem('name')
+
+    setTimeout(()=>{
+      navigate('/login')
+    },1000);
+
+  }
+  
+  return (
+    <div>
+     <h1>{loggedInUser}</h1>
+     <button onClick = {handleLogOut}>Logout</button>
+    </div>
+  )
+}
+
+export default MainPage

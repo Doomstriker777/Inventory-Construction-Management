@@ -1,0 +1,231 @@
+/* GLOBAL FIX */
+html, body {
+  height: auto;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Layout */
+.expense-container {
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fbff);
+  font-family: "Poppins", sans-serif;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ===== HEADER ===== */
+
+.expense-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.expense-title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+  background: linear-gradient(135deg, #1e293b, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ===== CONTROLS ROW ===== */
+
+.top-buttons {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-buttons select {
+  margin-right: 12px;
+}
+
+.top-buttons button {
+  margin-left: 16px;
+}
+
+/* ===== BUTTONS ===== */
+
+button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
+}
+
+.secondary-btn {
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.secondary-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== FILTER DROPDOWNS ===== */
+
+.filter-dropdown,
+.sub-dropdown {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 2px solid #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  background: white;
+  color: #2563eb;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.filter-dropdown:hover,
+.sub-dropdown:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.filter-dropdown:focus,
+.sub-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.sub-dropdown {
+  margin-left: 8px;
+}
+
+.filter-dropdown option,
+.sub-dropdown option {
+  color: black;
+  background: white;
+}
+
+/* ===== EXPENSE LIST (FORCED SCROLL ADDED HERE) ===== */
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  height: 400px;        /* fixed height */
+  overflow-y: scroll;   /* force vertical scroll */
+}
+
+/* ===== CARD ===== */
+
+.expense-card {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  transition: 0.25s ease;
+}
+
+.expense-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.expense-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expense-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.expense-amount {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.expense-meta {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #64748b;
+  display: flex;
+  gap: 14px;
+}
+
+.expense-meta span {
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* ===== CARD ACTIONS ===== */
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.edit-btn {
+  background: #e0ecff;
+  color: #1d4ed8;
+}
+
+.edit-btn:hover {
+  background: #c7dbff;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+/* ===== EMPTY TEXT ===== */
+
+.empty-text {
+  margin-top: 40px;
+  text-align: center;
+  color: #64748b;
+  font-size: 16px;
+}
