@@ -9,7 +9,7 @@ import 'react-toastify/ReactToastify.css'
 import MainPage from '../Components/MainPage.jsx'
 
 import MaterialManagement from '../Components/MaterialManagement.jsx'
-import Attendance from '../Components/attendance.jsx'
+import Attendance from '../Components/Attendance.jsx'
 import RequestsTemp from '../Components/RequestsTemp.jsx'
 import ExpensesOrg from '../Components/ExpensesOrg.jsx'
 import AddExpense from '../Components/AddExpense.jsx'
