@@ -8,9 +8,14 @@ const MainPage = () => {
   const [project, setproject] = useState("");
 
   useEffect(() => {
-    setLoggedInUser(localStorage.getItem("name"));
-    setproject(localStorage.getItem("projectCode"));
-  }, []);
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+    } else {
+      setLoggedInUser(localStorage.getItem("name"));
+      setproject(localStorage.getItem("projectCode"));
+    }
+  }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
