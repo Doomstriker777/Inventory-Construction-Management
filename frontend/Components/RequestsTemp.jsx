@@ -75,28 +75,10 @@ const RequestsTemp = () => {
         </h2>
 
         <button
+          className="back-btn"
           onClick={() => navigate("/")}
-          style={{
-            background: "#e0ecff",
-            color: "#1d4ed8",
-            border: "none",
-            padding: "10px 18px",
-            borderRadius: "12px",
-            fontSize: "14px",
-            fontWeight: "600",
-            cursor: "pointer",
-            transition: "all 0.2s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.background = "#c7dbff";
-            e.target.style.transform = "translateY(-1px)";
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.background = "#e0ecff";
-            e.target.style.transform = "translateY(0)";
-          }}
         >
-          Back
+          ← Back
         </button>
       </div>
 

@@ -15,7 +15,7 @@ const ExpenseOrg = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("http://localhost:8080/expense/all", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/expense/all`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -78,7 +78,7 @@ const ExpenseOrg = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8080/expense/delete/${id}`,
+        `${import.meta.env.VITE_API_URL}/expense/delete/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` }
@@ -122,28 +122,10 @@ const ExpenseOrg = () => {
           </h1>
 
           <button
+            className="back-btn"
             onClick={() => navigate("/")}
-            style={{
-              background: "#e0ecff",
-              color: "#1d4ed8",
-              border: "none",
-              padding: "10px 20px",
-              borderRadius: "12px",
-              fontSize: "14px",
-              fontWeight: "600",
-              cursor: "pointer",
-              transition: "all 0.2s ease"
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.background = "#c7dbff";
-              e.target.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = "#e0ecff";
-              e.target.style.transform = "translateY(0)";
-            }}
           >
-            ⬅ Back
+            ← Back
           </button>
         </div>
 

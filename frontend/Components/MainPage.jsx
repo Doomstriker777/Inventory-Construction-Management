@@ -33,11 +33,6 @@ const MainPage = () => {
             {project}
 
           </button>
-          <button className="nav-btn profile"
-            onClick={() => navigate("/profile")}
-          >
-            Profile
-          </button>
 
           <button className="nav-btn logout" onClick={handleLogout}>
             Logout

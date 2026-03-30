@@ -26,7 +26,7 @@ const AddExpense = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("http://localhost:8080/expense/add", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/expense/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

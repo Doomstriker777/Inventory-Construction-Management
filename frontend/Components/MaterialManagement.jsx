@@ -16,7 +16,7 @@ function MaterialManagement() {
 
   const fetchMaterials = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/materials");
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/materials`);
       setMaterials(res.data);
     } catch (error) {
       console.error("Error fetching materials:", error);
@@ -43,10 +43,10 @@ function MaterialManagement() {
 
     try {
       if (editIndex === -1) {
-        await axios.post("http://localhost:8080/api/materials", formData);
+        await axios.post(`${import.meta.env.VITE_API_URL}/api/materials`, formData);
       } else {
         await axios.put(
-          `http://localhost:8080/api/materials/${materials[editIndex]._id}`,
+          `${import.meta.env.VITE_API_URL}/api/materials/${materials[editIndex]._id}`,
           formData
         );
         setEditIndex(-1);
@@ -76,7 +76,7 @@ function MaterialManagement() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/materials/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/materials/${id}`);
       fetchMaterials();
     } catch (error) {
       console.error("Error deleting material:", error);

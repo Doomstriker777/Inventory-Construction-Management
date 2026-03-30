@@ -18,7 +18,7 @@ const EditExpense = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch(`http://localhost:8080/expense/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/expense/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -59,7 +59,7 @@ const EditExpense = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch(`http://localhost:8080/expense/update/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/expense/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
